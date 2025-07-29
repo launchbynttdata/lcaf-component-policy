@@ -17,6 +17,7 @@ deny[msg] {
     resource_change.provider_name != "registry.terraform.io/hashicorp/null"
     resource_change.provider_name != "registry.terraform.io/azure/azapi"
     resource_change.provider_name != "terraform.io/builtin/terraform"    
+    resource_change.provider_name != "registry.terraform.io/hashicorp/archive"
 
     msg := sprintf("Provider is not allowed: %s", [resource_change.provider_name])
 }
